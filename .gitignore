@@ -109,3 +109,10 @@ package-lock.json
 /lib
 /types
 test*
+
+# mcbgs
+
+skins
+capes
+resources
+users

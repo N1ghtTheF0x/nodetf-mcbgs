@@ -1,8 +1,11 @@
 {
-    "name": "@nodetf/<name>",
+    "name": "@nodetf/mcbgs",
     "type": "commonjs",
     "version": "1.0.0",
-    "description": "",
+    "description": "Minecraft Beta Game server (not for playing)",
+    "bin": {
+      "mcbgs": "./lib/index.js"
+    },
     "exports": {
       ".": {
         "require": {
@@ -17,13 +20,15 @@
       "prebuild": "npm run clean",
       "build": "tsc",
       "clean": "rm -rf ./lib",
-      "prepublishOnly": "npm run build"
+      "prepublishOnly": "npm run build",
+      "start": "ts-node ./source/index.ts"
     },
     "author": "N1ghtTheF0x",
     "license": "MIT",
     "devDependencies": {
       "ts-node": "latest",
-      "typescript": "latest"
+      "typescript": "latest",
+      "@types/node": "latest"
     },
     "repository": {
       "type": "git",
